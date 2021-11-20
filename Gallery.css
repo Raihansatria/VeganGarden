@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+@font-face {
+    font-family: monument;
+    src: url(fonts/MonumentExtended-Regular.woff);
+  }  
+@font-face {
+    font-family: monument-bold;
+    src: url(fonts/monumentextended-ultrabold-webfont.woff);
+  }
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/montserrat-medium-webfont.woff);
+  } 
+@font-face {
+    font-family: montserrat-bold;
+    src: url(fonts/Montserrat-Bold.woff);
+  } 
+  @font-face {
+    font-family: montserrat-med;
+    src: url(fonts/Montserrat-Medium.woff);
+  } 
+  html{
+    scroll-behavior: smooth;
+ }
+ /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffff
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00E57A
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00E57A
+  }
+.Container{
+    height: 70vh;
+    width: 100%;
+    background: white;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: transparent;
+}
+
+.logo {
+  cursor: pointer;
+  width: 60px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat-med", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li {
+  transition: transform 0.3s ease 0s;
+}
+
+.nav__links li:hover {
+  color: #000000;
+  transform: scale(1.2);
+  text-shadow: 5px 4px 8px rgba(17,100,102,0.6);
+}
+.fas.fa-shopping-cart{
+  padding-right: 30px;
+  cursor: pointer;
+  color: #00E57A;
+  display: inline-block;
+  transition: transform 0.3s ease 0s;
+}
+.fas.fa-shopping-cart:hover{
+  transform: scale(1.2);
+  text-shadow: 5px 4px 12px rgba(17,100,102,0.6);
+}
+/* .rightbtn{
+  transition: transform 0.3s ease 0s;
+}
+.rightbtn:hover{
+  transform: scale(1.2);
+} */
+.cta{
+  inherits: none;
+  padding: 9px 25px;
+  background-color: #00E57A;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+  display: inline-block;
+}
+
+.cta{
+  transform: scale(1.2);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+-webkit-box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+-moz-box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+}
+
+/* Mobile Nav */
+
+.fas.fa-bars {
+  color: #fff;
+  font-size: 25px;
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #000000;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .rightbtn a, .fas.fa-shopping-cart {
+    display: none;
+  }
+  .fas.fa-bars {
+    display: initial;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    object-fit: contain
+}
+
+.table thead {
+    background-color: #00E57A;
+}
+
+.table thead th {
+    padding: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.table tbody td input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container .table-wrap {
+    margin: 10px auto;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 9px 5px 24px -1px rgba(0,74,35,0.37);
+    -webkit-box-shadow: 9px 5px 24px -1px rgba(0,74,35,0.37);
+    -moz-box-shadow: 9px 5px 24px -1px rgba(0,74,35,0.37);
+}
+
+.container .table-wrap::-webkit-scrollbar {
+    height: 5px;
+}
+
+.container .table-wrap::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #5D7ECD, #0C91E6);
+}
+
+.table>:not(caption)>*>* {
+    padding: 2rem 0.5rem;
+}
+
+.input {
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-weight: 600;
+    outline: none;
+    padding: 8px;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 600;
+}
+
+.table tbody td input[type="checkbox"]:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f00c";
+    color: #fff;
+    font-size: 15px;
+    display: none;
+}
+
+.table tbody td input[type="checkbox"]:checked,
+.table tbody td input[type="checkbox"]:checked:hover {
+    background-color: #21cf95;
+}
+
+.table tbody td input[type="checkbox"]:checked::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table tbody td input[type="checkbox"]:hover {
+    background-color: #ddd;
+}
+
+.table tbody td {
+    padding: 30px;
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.table tbody td .fa-times {
+    color: #D32F2F;
+}
+
+.text-muted {
+    font-size: 12.5px;
+}
+
+.table tbody tr td:nth-of-type(3) {
+    min-width: 320px;
+}
+
+@media(min-width: 992px) {
+    .container .table-wrap {
+        overflow: hidden;
+    }
+}

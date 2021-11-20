@@ -1,0 +1,239 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #ffffff;
+    background-repeat: no-repeat
+}
+@font-face {
+    font-family: monument;
+    src: url(fonts/MonumentExtended-Regular.woff);
+  }  
+@font-face {
+    font-family: monument-bold;
+    src: url(fonts/monumentextended-ultrabold-webfont.woff);
+  }
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/montserrat-medium-webfont.woff);
+  } 
+@font-face {
+    font-family: montserrat-bold;
+    src: url(fonts/Montserrat-Bold.woff);
+  } 
+  @font-face {
+    font-family: montserrat-med;
+    src: url(fonts/Montserrat-Medium.woff);
+  } 
+  html{
+    scroll-behavior: smooth;
+ }
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: transparent;
+  }
+  
+  .logo {
+    cursor: pointer;
+    width: 60px;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat-med", sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li {
+    transition: transform 0.3s ease 0s;
+  }
+  
+  .nav__links li:hover {
+    color: #ecfff6;
+    transform: scale(1.2);
+    text-shadow: 5px 4px 8px rgba(17,100,102,0.6);
+  }
+  .fas.fa-shopping-cart{
+    padding-right: 30px;
+    cursor: pointer;
+    color: #00E57A;
+    display: inline-block;
+    transition: transform 0.3s ease 0s;
+  }
+  .fas.fa-shopping-cart:hover{
+    transform: scale(1.2);
+    text-shadow: 5px 4px 12px rgba(17,100,102,0.6);
+  }
+  /* .rightbtn{
+    transition: transform 0.3s ease 0s;
+  }
+  .rightbtn:hover{
+    transform: scale(1.2);
+  } */
+  .cta {
+    inherits: none;
+    padding: 9px 25px;
+    background-color: #00E57A;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease 0s;
+    display: inline-block;
+  }
+  
+  .cta:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+  -webkit-box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+  -moz-box-shadow: 5px 5px 32px -6px rgba(0,136,76,0.75);
+  }
+  
+  /* Mobile Nav */
+  
+  .fas.fa-bars {
+    color: #fff;
+    font-size: 25px;
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .rightbtn a, .fas.fa-shopping-cart {
+      display: none;
+    }
+    .fas.fa-bars {
+      display: initial;
+    }
+  }
+.container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.images img{
+    width: 100px;
+    margin-right: 1000px;
+}
+.card {
+    width: 360px;
+    height: 370px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    margin-left: 50px;
+    box-shadow: 18px 20px 33px -1px rgba(32,105,105,0.45);
+-webkit-box-shadow: 18px 20px 33px -1px rgba(32,105,105,0.45);
+-moz-box-shadow: 18px 20px 33px -1px rgba(32,105,105,0.45);
+}
+
+.form {
+    margin-top: 15px
+}
+
+.form label {
+    font-weight: 700;
+    font-size: 14px
+}
+
+.form input {
+    height: 45px;
+    border: 2px solid #eee;
+    transition: all 0.9s
+}
+
+.form input:focus {
+    box-shadow: none;
+    border: 2px solid #2541B2
+}
+
+.social-button {
+    height: 45px;
+    background-color: #2541B2
+}
+
+.login-button {
+    margin-top: 15px
+}
+
+.login-button button {
+    height: 45px
+}
+.btn.btn-success{
+    background-color: #00E57A;
+    border: #00E57A;
+}
